@@ -3,62 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Kacper</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-left">
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-right">
+                <a href="https://www.linkedin.com/in/kacper-domagała-bb0b5328a/" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" style="width: 30px; vertical-align: middle; margin-right: 5px;">
+                </a>
+                <a href="https://drive.google.com/uc?id=1hw8nbiiSxU3oNZN87u3RPU17Qv4jqp0K" class="cv-button" download>Download CV</a>
+            </div>
         </nav>
     </header>
 
     <!-- About Me Section -->
     <section id="about">
-        <h1>About Me</h1>
-        <p>Hi, I'm [Your Name], a passionate web developer. I love creating dynamic and beautiful websites.</p>
+        <div class="about-container">
+            <div class="about-text">
+                <h2 class="about-header">Hi, my name is <span class="name">Kacper</span>,</h2>
+                <p class="slogan">I am a Computer Science student, turning ideas into useful applications.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQGNArgA1lvb8Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1728639526899?e=1733961600&v=beta&t=pnv7l9lvaTQ7fYkUfqRYey2by0Mo-flokPl50V8Agjg" alt="Your photo" class="profile-pic">
+            </div>
+        </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-container">
+            <div class="education-item">
+                <div class="education-text">
+                    <h3>Vrije Universiteit Amsterdam</h3>
+                    <p>Bachelor's in Computer Science with Minor in Deep Programming</p>
+                    <p>Year of graduation: 2025, Amsterdam</p>
+                </div>
+                <div class="education-img">
+                    <img src="https://cdn.brandfetch.io/idaOMqOyIj/w/400/h/400/theme/dark/icon.jpeg?k=id64Mup7ac&t=1695113445452" alt="University Logo" style="width: 200px; vertical-align: middle; margin-right: 10px; border-radius: 10%;">
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="education-text">
+                    <h3>Prywatne Akademicke Liceum Ogólnokształcące</h3>
+                    <p>International Baccalaureate</p>
+                    <p>Year of graduation: 2022, Kraków</p>
+                </div>
+                <div class="education-img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/International_Baccalaureate_Logo.svg/2048px-International_Baccalaureate_Logo.svg.png" alt="University Logo" style="width: 200px; vertical-align: middle; margin-right: 10px; border-radius: 10%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-container">
+            <div class="experience-item">
+                <div class="exp-text">
+                    <h3>3S Money</h3>
+                    <p>IT Support Assistant</p>
+                    <p>May 2024 - Present, Amsterdam</p>
+                </div>
+                <div class="exp-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqk4fnPmptDG_LPZdEfSpHYx-0Os6MVggNaw&s" alt="3S Money" style="width: 200px; vertical-align: middle; margin-right: 10px; border-radius: 10%;">
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="exp-text">
+                    <h3>Interstal S.A.</h3>
+                    <p>Web designer and developer</p>
+                    <p>July 2023 - May 2024, Kraków</p>
+                </div>
+                <div class="exp-img">
+                    <img src="https://interstal.pl/wp-content/uploads/2020/06/Interstal-SA.jpg" alt="Interstal S.A. logo" style="width: 200px; vertical-align: middle; margin-right: 10px; border-radius: 10%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (Tiles) -->
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of the first project.</p>
+        <div class="project-grid">
+            <div class="project-tile">
+                <h3>Learner App</h3>
+                <p style="text-align: justify;">In order to help my Dutch learning journey, using <b><u>SwiftUI</u></b> and <b><u>Firebase</u></b> I created a Learner App. It allows users to register, 
+                add words to their personal dictionary and train the words by translation. 
+                I've also added Italian as one of the languages and a randomizing quizzing algorithm to ensure that words won't repeat too often. </p>
+                <a href="https://github.com/GacuGacu/LearnerApp" target="_blank" class="github-button">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="github" style="width: 30px; vertical-align: middle; margin-right: 5px;">
+                </a>
+            </div>
+            <div class="project-tile">
+                <h3>Beer App</h3>
+                <p style="text-align: justify;">Using <b><u>SwiftUI</b></u> I created a beer app which allows the user to document the beers they have drunk in a clear way.
+                    Using <b><u>Core Data</b></u> I was able to make the app function even without internet connection. The app allowed to add custom pictures from by taking a photo or by selecting one from the photo library.
+                </p>
+                <a href="https://github.com/GacuGacu/BeerApp" target="_blank" class="github-button">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="github" style="width: 30px; vertical-align: middle; margin-right: 5px;">
+                </a>
+            </div>
+            <div class="project-tile">
+                <h3>Restaurant App</h3>
+                <p style="text-align: justify;">I've always had an issue with picking restaurants when going out to the city, especially when I wasn't alone. Using <b><u>React Native</u></b>
+                    ,<b><u>Node JS</u></b> and <b><u>Google Maps API</u></b> I made an app that allowed users to connect and swipe through different restaurants. Once both users like the same restaurant the "game" ends.
+                </p>
+                <a href="https://github.com/GacuGacu/RestaurantApp" target="_blank" class="github-button">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="github" style="width: 30px; vertical-align: middle; margin-right: 5px;">
+                </a>
+            </div>
         </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of the second project.</p>
-        </div>
-        <!-- Add more projects as needed -->
     </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <!-- Add more skills as needed -->
-        </ul>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: yourname@example.com</p>
+        <p>If you have any questions or inquiries, feel free to reach out!</p>
+        <a href="mailto:kacper.domagala2003@gmail.com" class="cv-button">Send Email</a>
     </section>
-
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        <p>&copy; 2024 Kacper Domagała. Hosted by Github Pages</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const sloganElement = document.querySelector('.slogan');
+          
+          setTimeout(function() {
+            sloganElement.classList.add('typed');
+          }, 4000); 
+        });
+    </script>
 </body>
 </html>
