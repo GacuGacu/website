@@ -3,19 +3,16 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #001F3F;  /* Dark-toned blue background */
-    color: #ffffff;  /* White text */
+    background-color: #001F3F;
+    color: #ffffff;
     line-height: 1.6;
-    height:100vh;
+    height: 100vh;
+    overflow-x: hidden;
 }
 
+/* Loading Gradient */
 body {
-    animation: loading-gradient 3s infinite; /* Animate the loading gradient */
-}
-
-#content {
-    display: none; /* Initially hidden */
-    color: white; /* Text color */
+    animation: loading-gradient 3s infinite;
 }
 
 /* Sticky Header */
@@ -23,7 +20,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #001F3F;  /* Dark-toned blue for header */
+    background-color: #001F3F;
     color: white;
     z-index: 1000;
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
@@ -55,14 +52,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #003366;  /* Lighter blue on hover */
+    background-color: #003366;
     border-radius: 5px;
 }
 
 /* Download CV Button */
 .cv-button {
     padding: 0.7rem 1.5rem;
-    background-color: #007BFF;  /* Blue button */
+    background-color: #007BFF;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -71,14 +68,15 @@ nav ul li a:hover {
 }
 
 .cv-button:hover {
-    background-color: #0056b3;  /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
 /* About Section */
 #about {
-    background-color: #001F3F; /* Dark-toned blue background */
+    background-color: #001F3F;
     padding: 4rem 2rem;
-    margin-top: 70px; /* To account for the sticky header */
+    margin-top: 70px;
+    flex-direction: column;
 }
 
 .about-container {
@@ -89,64 +87,60 @@ nav ul li a:hover {
 }
 
 .about-header {
-    font-size: 36px; /* Larger font size for the header */
-    font-weight: bold; /* Bold text for the header */
-    margin: 0; /* Remove default margin */
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
 }
 
 .name {
     color: #e8ff00;
-    font-weight: bold; /* Bold text for name */
-    font-size: 48px; /* Even larger font size for name */
+    font-weight: bold;
+    font-size: 48px;
 }
 
 .slogan {
     font-size: 24px;
     font-family: 'Source Code Pro', monospace;
-    white-space: nowrap; /* Keeps text on one line */
-    overflow: hidden; /* Hides the overflow content while typing */
-    border-right: 3px solid; /* Adds a cursor-like effect at the end */
-    width: 0; /* Start with 0 width */
-    animation: typing 4s steps(40, end) forwards; /* Only the typing animation */
-  }
-  
-  /* Keyframe for typing effect */
-  @keyframes typing {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    width: 0;
+    animation: typing 4s steps(40, end) forwards;
+}
+
+/* Keyframe for typing effect */
+@keyframes typing {
     from { width: 0; }
     to { width: 100%; }
-  }
-  
-  /* Optional: Remove the blinking cursor after typing */
-  .slogan.typed {
-    border-right: none; /* Removes the cursor once typing finishes */
-  }
-  
+}
+
+/*Remove the blinking cursor after typing */
+.slogan.typed {
+    border-right: none;
+}
 
 .about-image .profile-pic {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border: 5px solid #ffffff;  /* White border */
+    border: 5px solid #ffffff;
     object-fit: cover;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Added shadow for depth */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Education & Experience Sections */
 section#education, section#experience {
-    
-    background-color: #001F3F;  /* Dark-toned blue background */
+    background-color: #001F3F;
     padding: 4rem 2rem;
 }
 
 h2 {
-    
     font-size: 2rem;
-    color: #ffffff;  /* White headings */
+    color: #ffffff;
     margin-bottom: 2rem;
 }
 
 .education-container, .experience-container {
-    
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -154,11 +148,11 @@ h2 {
 
 /* Experience Items */
 .experience-item, .education-item {
-    display: flex; /* Flexbox for alignment */
-    justify-content: space-between; /* Space between text and image */
-    align-items: center; /* Align items vertically */
-    background-color: #ffffff;  /* White tiles */
-    color: #001F3F;  /* Dark blue text */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    color: #001F3F;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -166,15 +160,13 @@ h2 {
 
 /* Text Styling */
 .exp-text, .education-text {
-    display: flex; /* Use flexbox to stack text vertically */
-    flex-direction: column; /* Stack text vertically */
+    display: flex;
+    flex-direction: column;
 }
-
-
 
 /* Project Section (Grid Tiles) */
 #projects {
-    background-color: #001F3F;  /* Dark-toned blue background */
+    background-color: #001F3F;
     padding: 4rem 2rem;
 }
 
@@ -185,8 +177,8 @@ h2 {
 }
 
 .project-tile {
-    background-color: #ffffff;  /* White project tiles */
-    color: #001F3F;  /* Dark blue text */
+    background-color: #ffffff;
+    color: #001F3F;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -194,41 +186,42 @@ h2 {
 }
 
 .github-button {
-    position: absolute; /* Position absolute to place in upper right */
-    top: 10px; /* Space from the top */
-    right: 10px; /* Space from the right */
-    color: #333; /* Color of the icon */
-    font-size: 24px; /* Size of the icon */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Smooth transition for hover */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
 }
+
 .project-tile:hover {
     transform: scale(1.05);
 }
 
 /* Contact Section */
 #contact {
-    background-color: #001F3F;  /* Dark-toned blue background */
+    background-color: #001F3F;
     color: white;
     padding: 4rem 2rem;
-    text-align: center;  /* Center all text in this section */
+    text-align: center;
 }
 
 #contact h2 {
     font-size: 2rem;
     color: white;
-    margin-bottom: 1rem;  /* Reduced margin for better spacing */
+    margin-bottom: 1rem;
 }
 
 #contact p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;  /* Space between paragraph and button */
+    margin-bottom: 2rem;
 }
 
-/* Reuse the CV button styles for Send Email button */
+/* Send email */
 .cv-button {
     padding: 0.7rem 1.5rem;
-    background-color: #007BFF;  /* Blue button */
+    background-color: #007BFF;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -237,12 +230,12 @@ h2 {
 }
 
 .cv-button:hover {
-    background-color: #0056b3;  /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
 /* Footer */
 footer {
-    background-color: #001F3F;  /* Dark blue for footer */
+    background-color: #001F3F;
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -250,9 +243,10 @@ footer {
     bottom: 0;
     width: 100%;
     margin-top: 2rem;
+    white-space: normal;
 }
 
-/* Responsive Design */
+/* Responsiveness */
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
@@ -264,7 +258,66 @@ footer {
     }
 
     nav ul {
+        flex-direction: column;
         gap: 1rem;
+    }
+
+    nav {
+        padding: 1rem;
+    }
+
+    .education-container, .experience-container {
+        gap: 1.5rem; 
+    }
+
+    .experience-item, .education-item {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .exp-img, .education-img {
+        margin-top: 1rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    #contact {
+        padding: 2rem 1rem;
+    }
+
+    #contact h2 {
+        font-size: 1.5rem; 
     }
 }
 
+@media (max-width: 480px) {
+    .about-header {
+        font-size: 28px; 
+    }
+
+    .name {
+        font-size: 36px; 
+    }
+
+    .slogan {
+        font-size: 18px; 
+    }
+
+    nav ul {
+        gap: 0.5rem; 
+    }
+}
+
+@media (max-width: 768px) {
+    .slogan {
+        animation: none; 
+        width: auto; 
+        border-right: none;
+        white-space: normal;
+    }
+    .nav-left {
+        display: none;
+    }
+}
